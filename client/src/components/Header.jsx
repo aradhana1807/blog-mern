@@ -8,8 +8,11 @@ export default function Header() {
     const path = useLocation().pathname;
     return (
         <Navbar className='border-b-2 font-display'>
-            <Link to='/' className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>
-                ds. blog</Link>
+            <Link to='/' className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold   dark:text-white'>
+                <span className='px-2 py-1 bg-gradient-to-r from-slate-500 to-slate-800 rounded-lg text-white'>
+                    ds.
+                </span>
+            </Link>
 
             <form>
                 <TextInput type='text'
