@@ -16,16 +16,15 @@ export default function Dashboard() {
 
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row">
-      <div className="md:min-w-56">
+    <div className="font-display min-h-screen flex flex-col md:flex-row">
+      <div className="md:w-56">
         {/* Sidebar */}
         <DashSidebar />
       </div>
 
-      <div>
         {/* profile... */}
         {tab === 'profile' && <DashProfile />}
-      </div>
+     
     </div>
   )
 }
