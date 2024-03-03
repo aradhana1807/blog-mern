@@ -73,7 +73,7 @@ export default function PostPage() {
 
                     <div className="flex max-w-2xl mx-auto w-full justify-between mt-5">
                         <Button color="gray" onClick={() => navigateToPost('previous')} disabled={postIndex === 0}>Previous</Button>
-                        <Button  outline onClick={() => navigateToPost('next')} disabled={postIndex === posts.length - 1}>Next</Button>
+                        <Button color="gray" outline onClick={() => navigateToPost('next')} disabled={postIndex === posts.length - 1}>Next</Button>
                     </div>
                     <CommentSection postId={currentPost._id} />
                 </>

@@ -37,7 +37,7 @@ export default function Header() {
                 </span>
             </Link>
 
-            <form>
+            {/* <form>
                 <TextInput type='text'
                     placeholder='Search'
                     rightIcon={AiOutlineSearch}
@@ -45,7 +45,7 @@ export default function Header() {
             </form>
             <Button className='w-12 h-10 lg:hidden' color='gray' pill>
                 <AiOutlineSearch />
-            </Button>
+            </Button> */}
 
             <div className="flex gap-2 md:order-2">
                 <Button className='w-12 h-10 hidden sm:inline' color='gray' pill onClick={() => dispatch(toggleTheme())}>
@@ -79,19 +79,19 @@ export default function Header() {
                 )
                 }
 
-                <Navbar.Toggle/>
+                <Navbar.Toggle />
             </div >
             <Navbar.Collapse>
                 <Navbar.Link active={path === '/'} as={'div'}>
                     <Link to='/'>Home</Link>
                 </Navbar.Link>
 
-                <Navbar.Link active={path === '/about'} as={'div'}>
+                {/* <Navbar.Link active={path === '/about'} as={'div'}>
                     <Link to='/about'>About</Link>
-                </Navbar.Link>
+                </Navbar.Link> */}
 
-                <Navbar.Link active={path === '/projects'} as={'div'}>
-                    <Link to='/projects'>Projects</Link>
+                <Navbar.Link active={path === '/chapters'} as={'div'}>
+                    <Link to='/chapters'>Chapters</Link>
                 </Navbar.Link>
             </Navbar.Collapse>
         </Navbar >
