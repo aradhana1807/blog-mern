@@ -30,7 +30,7 @@ export default function Header() {
     }
 
     return (
-        <Navbar className='border-b-2 font-display'>
+        <Navbar className='border-b-2 font-display bg-white border-gray-200 dark:bg-gray-900'>
             <Link to='/' className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold   dark:text-white'>
                 <span className='px-2 py-1 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent'>
                     daily struggle.

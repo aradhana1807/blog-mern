@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import {useSelector} from 'react-redux'
+import { useSelector } from 'react-redux';
 
 export default function UpdatePost() {
     const [file, setFile] = useState(null);
@@ -21,6 +21,7 @@ export default function UpdatePost() {
     const [formData, setFormData] = useState({});
     const [publishError, setPublishError] = useState(null);
     const { postId } = useParams();
+
     const navigate = useNavigate();
     const { currentUser } = useSelector((state) => state.user);
 
@@ -38,13 +39,13 @@ export default function UpdatePost() {
                     setPublishError(null);
                     setFormData(data.posts[0]);
                 }
-            }
+            };
 
             fetchPost();
         } catch (error) {
             console.log(error.message);
         }
-    }, [postId])
+    }, [postId]);
 
     const handleUpdloadImage = async () => {
         try {
@@ -85,7 +86,7 @@ export default function UpdatePost() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch(`/api/post/updatepost/${formData._id}/${currentUser._id}`, {
+            const res = await fetch(`/api/post/updatepost/${postId}/${currentUser._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -106,9 +107,8 @@ export default function UpdatePost() {
             setPublishError('Something went wrong');
         }
     };
-    
     return (
-        <div className='font-display p-3 max-w-3xl mx-auto min-h-screen'>
+        <div className='p-3 max-w-3xl mx-auto min-h-screen'>
             <h1 className='text-center text-3xl my-7 font-semibold'>Update post</h1>
             <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
                 <div className='flex flex-col gap-4 sm:flex-row justify-between'>
@@ -130,12 +130,12 @@ export default function UpdatePost() {
                         value={formData.category}
                     >
                         <option value='uncategorized'>Select a category</option>
-                        <option value='daily struggle'>daily struggle</option>
-                        <option value='weekly struggle'>weekly struggle</option>
-                        <option value='monthly struggle'>monthly struggle</option>
+                        <option value='javascript'>JavaScript</option>
+                        <option value='reactjs'>React.js</option>
+                        <option value='nextjs'>Next.js</option>
                     </Select>
                 </div>
-                <div className='flex gap-4 items-center justify-between border-4 border-teal-800 border-dotted p-3'>
+                <div className='flex gap-4 items-center justify-between border-4 border-teal-600 border-dotted p-3'>
                     <FileInput
                         type='file'
                         accept='image/*'

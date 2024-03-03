@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      display: ["Poppins", "sans-serif"],
+      'display': ["Poppins", "sans-serif"],
+      'lora': ['Lora', "serif"],
     },
   },
   plugins: [require('flowbite/plugin'), require('tailwind-scrollbar')],
