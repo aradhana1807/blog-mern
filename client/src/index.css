@@ -1,8 +1,7 @@
+@import url("https://fonts.cdnfonts.com/css/antiqua-2");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.cdnfonts.com/css/antiqua-2');
 
 body {
   height: 100vh;
@@ -10,5 +9,5 @@ body {
 
 .ql-editor {
   font-size: 1.05rem;
-  font-family: 'Book Antiqua', sans-serif;
+  font-family: "Book Antiqua", sans-serif;
 }
