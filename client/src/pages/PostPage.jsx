@@ -61,7 +61,7 @@ export default function PostPage() {
             {currentPost && (
                 <>
                     <h1 className="text-3xl mt-10 p-3 text-center max-w-2xl mx-auto">{currentPost.title}</h1>
-                    <Link to={`/search?category=${currentPost.category}`} className="self-center mt-5">
+                    <Link to='' className="self-center mt-5">
                         <Button color="gray" pill size='xs'>{currentPost.category}</Button>
                     </Link>
                     <img src={currentPost.image} alt={currentPost.title} className="mt-10 p-2 max-h-[300px] w-full object-cover" />
