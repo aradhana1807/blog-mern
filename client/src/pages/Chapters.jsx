@@ -57,7 +57,7 @@ export default function Chapters() {
     };
 
     return (
-        <div className='p-7 w-full font-display max-w-6xl mx-auto min-h-screen'>
+        <div className='font-display flex flex-col gap-6 p-10 px-3 max-w-6xl mx-auto min-h-screen items-center'>
             <h1 className='text-3xl font-semibold sm:border-b border-gray-500 p-3 mt-5 '>
                 Chapters
             </h1>

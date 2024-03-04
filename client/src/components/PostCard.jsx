@@ -7,11 +7,11 @@ export default function PostCard({ post }) {
                 <img
                     src={post.image}
                     alt='post cover'
-                    className='h-[200px] w-full object-cover group-hover:h-[160px] transition-all duration-300 z-20'
+                    className='h-[200px] w-full object-cover group-hover:h-[155px] transition-all duration-300 z-20'
                 />
             </Link>
             <div className='p-3 flex flex-col gap-2'>
-                <p className='text-lg font-semibold line-clamp-2'>{post.title}</p>
+                <p className='text-md font-semibold line-clamp-2'>{post.title}</p>
                 <span className='italic text-sm'>{post.category}</span>
                 <Link
                     to={`/post/${post.slug}`}

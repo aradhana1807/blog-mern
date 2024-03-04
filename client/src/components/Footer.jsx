@@ -1,14 +1,16 @@
 import { Footer } from 'flowbite-react';
 import { Link } from 'react-router-dom';
 import { BsInstagram, BsTwitter, BsGithub } from 'react-icons/bs';
+import { useSelector } from 'react-redux';
 export default function FooterComp() {
+    const theme = useSelector(state => state.theme.theme)
     return (
         <Footer container className='font-display dark:bg-gray-900 border border-t-8 border-teal-600'>
             <div className='w-full max-w-7xl mx-auto'>
                 <div className='grid w-full justify-between sm:flex md:grid-cols-1'>
                     <div className='mt-5'>
                         <Link to='/' className='self-center whitespace-nowrap text-lg sm:text-xl font-semibold   dark:text-white'>
-                            <span className='px-2 py-1 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent'>
+                            <span className={`px-2 py-1 bg-gradient-to-r ${theme === 'dark' ? 'from-emerald-400 to-cyan-400' : 'from-emerald-500 to-emerald-900'} bg-clip-text text-transparent`}>
                                 ds.
                             </span>
                         </Link>
