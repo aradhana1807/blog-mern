@@ -1,32 +1,28 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import CloudHikari from "../images/cloudhikari.svg";
 export default function Home() {
   return (
-    <div className='font-display flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto min-h-screen items-center'>
-      <h1 className='text-3xl font-bold lg:text-6xl '> Welcome to ds. blog </h1>
-      <p className="text-center">
+    <div className="font-display flex flex-col gap-2 p-24 px-3 max-w-6xl mx-auto min-h-screen items-center">
+      <div className="flex items-center justify-center">
+        <img src={CloudHikari} alt="cat" height="400" width="400" />
+      </div>
 
-        Welcome to the absolute end of boredom.
-        <br></br><br></br>
-        Boredom turns into a space of imagination, desires, dreams
-        <br></br>
-        and many more into this good for nothing world.
-        <br></br><br></br>
-        <i>A faraway reality.</i>
-        <br></br><br></br>
-        Good for nothing isn't a negative space to be in.
-        <br></br>
-        But also, it's not really the reality we see today
-        <br></br>
-        but wish for it to be part of in our future
-      </p>
+      <div className="max-w-md md:max-w-xl p-6">
+        <h2 className="font-medium text-center text-white">
+          Hikari and Cloud welcome you to the world of daily struggle.
+          <br />
+          Embark on the journey with them, as they accompany their humans
+          through life&apos;s ups and downs, sharing in their daily struggles
+          and triumphs
+        </h2>
+      </div>
 
       <Link
-        to='/chapters'
-        className='text-xs sm:text-sm text-teal-500 font-bold hover:underline'
+        to="/chapters"
+        className="text-md text-teal-500 font-bold hover:underline"
       >
         View all chapters
       </Link>
-
-    </div >
-  )
+    </div>
+  );
 }
