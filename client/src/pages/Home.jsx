@@ -8,7 +8,7 @@ export default function Home() {
       </div>
 
       <div className="max-w-md md:max-w-xl">
-        <h2 className="font-medium text-center italic text-white">
+        <h2 className="font-medium text-center italic dark:text-white">
           Hikari and Cloud welcome you to the world of daily struggle.
           <br />
           Embark on the journey with them, as they accompany their humans
